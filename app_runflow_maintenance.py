@@ -191,7 +191,7 @@ def generate_wordcloud():
 
         # 提取名词和动词
         nouns_verbs = []
-        for word, flag in words:
+        for word, flag in word_objects:
             if flag.startswith('n') or flag.startswith('v'):
                 nouns_verbs.append(word)
 
@@ -244,4 +244,5 @@ def generate_wordcloud():
 
 if __name__ == '__main__':
     # 生产环境应设置debug=False
+
     app.run(host='0.0.0.0', port=5090, debug=False)
