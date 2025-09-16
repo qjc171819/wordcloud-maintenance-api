@@ -77,6 +77,10 @@ def precise_cut(text):
 
 # 构建设备-问题组合词
 def build_compound_terms(terms):
+    # 设备名词库
+    DEVICE_NAMES = ["空调", "电脑", "打印机", "照明灯", "插座", "开关",
+                    "网线", "门禁", "服务器", "软件", "设备", "实验室",
+                    "焊接车间", "天花板", "管路", "线缆", "减震器", "隔音墙", "咖啡机", "灯", "键盘", "鼠标", "网络"]
     compounds = []
     i = 0
     while i < len(terms) - 1:
@@ -246,3 +250,4 @@ if __name__ == '__main__':
     # 生产环境应设置debug=False
 
     app.run(host='0.0.0.0', port=5090, debug=False)
+
