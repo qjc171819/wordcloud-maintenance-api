@@ -133,7 +133,7 @@ def generate_custom_wordcloud(word_freq):
             font_path=font_path,
             background_color='white',
             max_words=50,
-            colormap='Reds',
+            colormap='tab20c',
             contour_width=1,
             contour_color='#1f77b4',
             scale=2,
@@ -255,5 +255,6 @@ if __name__ == '__main__':
     # 生产环境应设置debug=False
 
     app.run(host='0.0.0.0', port=5090, debug=False)
+
 
 
