@@ -31,7 +31,7 @@ def generate_url(base64_image):
     # api_key = 'cd252b3a315af679db9b6f10dbe1eff9'
     postUrl = r'https://freeimage.host/api/1/upload'
     api_key = '6d207e02198a847aa98d0a2a901485a5'
-    # user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0'
+    user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0'
     req = requests.post(f'{postUrl}?key={api_key}', data = {'image': base64_image}
                         ,headers = {'user-agent': user_agent}
                         )
@@ -259,6 +259,7 @@ if __name__ == '__main__':
     # 生产环境应设置debug=False
 
     app.run(host='0.0.0.0', port=5090, debug=False)
+
 
 
 
